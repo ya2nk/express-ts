@@ -1,13 +1,14 @@
 import express, { NextFunction } from 'express'
+import qs from 'qs'
 
 export const reqRaw = (req: express.Request, res: express.Response, next: NextFunction) => {
-    let data = '';
-    req.setEncoding('utf8')
-    req.on('data', function (chunk) {
-        data += chunk;
-    });
-    req.on('end', function () {
-        req.bodyRaw = data;
-        next();
-    });
+
+    if (req.headers['content-type'] === 'application/json') {
+        req.body = JSON.parse(req.body);
+    }
+
+    if (req.headers['content-type'] === 'application/x-www-form-urlencoded') {
+        req.body = qs.parse(req.body);
+    }
+    next();
 }

@@ -1,0 +1,14 @@
+{"address":"::1","code":"ECONNREFUSED","errno":-4078,"fatal":true,"level":"error","message":"Error during Data Source initialization connect ECONNREFUSED ::1:3306","port":3306,"stack":"Error: connect ECONNREFUSED ::1:3306\n    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1494:16)","syscall":"connect","timestamp":"2023-05-17T01:02:10.978Z"}
+{"level":"error","message":"error stream encoding should not be set","timestamp":"2023-05-17T01:03:53.627Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:07:40.134Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:37:40.297Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:42:58.545Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:43:20.275Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:44:15.136Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:44:26.641Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T01:45:05.714Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T02:20:29.506Z"}
+{"level":"error","message":"error Unexpected token t in JSON at position 0","timestamp":"2023-05-17T02:29:25.817Z"}
+{"level":"error","message":"error Unexpected token t in JSON at position 0","timestamp":"2023-05-17T02:30:14.806Z"}
+{"level":"error","message":"error Unexpected token - in JSON at position 0","timestamp":"2023-05-17T02:30:27.013Z"}
+{"level":"error","message":"invalid signature","name":"JsonWebTokenError","timestamp":"2023-05-17T03:16:10.304Z"}

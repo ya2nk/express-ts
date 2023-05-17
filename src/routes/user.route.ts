@@ -1,5 +1,6 @@
 import express, { Router } from 'express'
 import { UserController } from '../controllers/user.controller'
+import { tokenVerify } from '../middlewares/middleware.auth';
 
 export class UserRouter {
     public router: Router;
@@ -14,7 +15,9 @@ export class UserRouter {
 
     // remplace my example routes and controller methods for your own 
     protected registerRoutes(): void {
-        this.router.get('/', this.controller.index);
+        //this.router.use(tokenVerify)
+        this.router.get('/', this.controller.index)
+        this.router.post('/', this.controller.getAll)
     }
 
 }

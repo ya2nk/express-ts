@@ -2,10 +2,9 @@ import express from 'express'
 import 'reflect-metadata'
 import cors from 'cors'
 import routes from './routes';
-import bodyParser from 'body-parser'
 import { errorResponder, invalidPathHandler, errorLogger } from './middlewares/middleware.logger';
-import { reqRaw } from './middlewares/middleware.req';
 import AppDataSource from './config/config.database';
+import { reqRaw } from './middlewares/middleware.req';
 
 class Server {
     public app: express.Application;
@@ -19,11 +18,11 @@ class Server {
     public config(): void {
         this.app.set('port', 3000);
         process.env.TZ = "Asia/Jakarta";
-
-        this.app.use(express.json());
-        this.app.use(express.urlencoded({ extended: false }));
-        this.app.use(cors())
+        this.app.use(express.text({ type: "*/*" }));
         this.app.use(reqRaw)
+        //this.app.use(express.urlencoded({ extended: true }));
+        this.app.use(cors())
+
         routes(this.app)
     }
 

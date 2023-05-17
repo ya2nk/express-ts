@@ -7,4 +7,9 @@ export class UserController {
         const users = await UserService.getAll()
         res.status(200).json(users)
     }
+
+    public getAll(req: Request, res: Response) {
+        console.log(req.body)
+        res.status(200).json({ message: "test" })
+    }
 }

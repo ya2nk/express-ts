@@ -25,8 +25,8 @@ export class IclockController {
             const cmd = await Cmd.findOne({ where: { sn: req.query.SN as string, status: 0 }, order: { inputDate: 'ASC' } })
 
             if (cmd) {
-                if (req.bodyRaw != undefined) {
-                    const rows = req.bodyRaw.split("\n")
+                if (req.body != undefined) {
+                    const rows = req.body.split("\n")
                     let data = [];
                     rows.forEach((row: string) => {
                         let cols = row.split("\t")
